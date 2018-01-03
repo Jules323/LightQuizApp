@@ -149,13 +149,13 @@ let correctAnswers = null;
 function generateStartElement() {
   console.log("`generateStartElement` ran");
   return `
-    <header role='banner'>
+    <section role='section'>
       <div class="startPage js-start-page">
         <h1 class="start-one">How enLIGHTened are you?</h1>
         <h2 class="start-two">An illuminating quiz about light</h2>
         <button type="submit" class="start-btn js-start-btn">READY?</button>
       </div>
-    </header>`;
+    </section>`;
 }
 
 function renderStartPage() {
@@ -181,7 +181,7 @@ function generateQuestionElement(item) {
   console.log('`generateQuestionElement` ran');
       let answers = getAnswers();
   return `
-    <main role='main'>
+    <section role='section'>
       <div class="questionPage js-question-page">
         <div class="question-area">
         <p class="question-asked js-question-asked">${item.question}</p>
@@ -207,7 +207,7 @@ function generateQuestionElement(item) {
         </div>
         
       </div>
-    </main>`;
+    </section>`;
 }
 
 function renderQuestionPage() {
@@ -258,7 +258,7 @@ function generateInfoElement(item, currentAnswer) {
         <p class="add-info">${item.extraInfoString}</p>
         <button type="submit" class="nav-next next-btn js-next-btn">NEXT</button>
       </div>
-    </section>`;
+  </section>`;
 }
 
 function renderInfoPage(currentAnswer) {
@@ -301,7 +301,8 @@ function generateSummaryElement(scoreMsg) {
         <div class="total-score">
             <h2 class="user-score">Your final score was ${correctAnswers} out of 10.</h2>
         <button type="submit" class="start-btn js-start-btn">TRY AGAIN?</button>
-      </div>`;
+      </div>
+  </section>`;
 }
 
 function renderSummaryPage(scoreMsg) {
