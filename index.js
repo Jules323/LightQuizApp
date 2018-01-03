@@ -149,13 +149,11 @@ let correctAnswers = null;
 function generateStartElement() {
   console.log("`generateStartElement` ran");
   return `
-    <section role='section'>
       <div class="startPage js-start-page">
         <h1 class="start-one">How enLIGHTened are you?</h1>
         <h2 class="start-two">An illuminating quiz about light</h2>
         <button type="submit" class="start-btn js-start-btn">READY?</button>
-      </div>
-    </section>`;
+      </div>`;
 }
 
 function renderStartPage() {
@@ -181,7 +179,6 @@ function generateQuestionElement(item) {
   console.log('`generateQuestionElement` ran');
       let answers = getAnswers();
   return `
-    <section role='section'>
       <div class="questionPage js-question-page">
         <div class="question-area">
         <p class="question-asked js-question-asked">${item.question}</p>
@@ -206,8 +203,7 @@ function generateQuestionElement(item) {
           </div>
         </div>
         
-      </div>
-    </section>`;
+      </div>`;
 }
 
 function renderQuestionPage() {
@@ -250,15 +246,13 @@ function generateInfoElement(item, currentAnswer) {
   console.log("`generatingInfoElement` ran");
   const isAnswerCorrect = true;
   return `
-  <section role='section'>
       <div class="info-area">
         <img src=${item.picture} class="info-image" alt="${item.altPicture}">
         <p class="user-message">${currentAnswer}</p>
         <p class="correct-answer">The correct answer is: ${item.correctAnswerString}</p>
         <p class="add-info">${item.extraInfoString}</p>
         <button type="submit" class="nav-next next-btn js-next-btn">NEXT</button>
-      </div>
-  </section>`;
+      </div>`;
 }
 
 function renderInfoPage(currentAnswer) {
@@ -295,14 +289,12 @@ function handleSubmitBtn() {
 function generateSummaryElement(scoreMsg) {
   console.log("`generateSummaryElement` ran");
   return `
-  <section role='section'>
       <div class="sum-area js-sum-area">
         <h1 class="pass-fail-msg">${scoreMsg}</h1>
         <div class="total-score">
             <h2 class="user-score">Your final score was ${correctAnswers} out of 10.</h2>
         <button type="submit" class="start-btn js-start-btn">TRY AGAIN?</button>
-      </div>
-  </section>`;
+      </div>`;
 }
 
 function renderSummaryPage(scoreMsg) {
