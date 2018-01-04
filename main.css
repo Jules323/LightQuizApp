@@ -106,7 +106,8 @@ fieldset {
 }
 
 legend {
-  font-size: 0px;
+  width: 0px;
+  height: 0px;
 }
 
 .choice, .user-score{
