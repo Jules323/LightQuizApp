@@ -188,7 +188,7 @@ function generateQuestionElement(item) {
             <form id="answer-form">
             <fieldset name="answers">
             
-            <legend>Answers</legend>
+            <legend>answers</legend>
         ${answers}
                 <button type="submit" class="submit-btn js-submit-btn">SUBMIT</button>
             </form>
