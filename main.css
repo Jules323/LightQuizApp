@@ -106,7 +106,7 @@ fieldset {
 }
 
 legend {
-  font-size: 0;
+  display: none;
 }
 
 .choice, .user-score{
