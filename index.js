@@ -163,11 +163,13 @@ function renderStartPage() {
 }
 
 function getAnswers() {
-  let radioAnswers = " ";
-  let Answers = " ";
+  let radioAnswers = "";
+  let Answers = "";
+  let Sam = 0;
   appItems.questions[currentQuestion].answers.forEach(function(choice) {
-    Answers = `<label class="choice">
-                <input type="radio" name="userAnswer" class="answers js-answers" value="${choice}"> ${choice}</label>
+    Sam++;
+    Answers = `<label id="B${Sam}" for="A${Sam}" class="choice">
+                <input id="A${Sam}" aria-labelledby="B${Sam}" type="radio" name="userAnswer" class="answers js-answers" value="${choice}"> ${choice}</label>
                 <br/><br/>`;
     radioAnswers += Answers;
   });
