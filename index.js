@@ -169,7 +169,7 @@ function getAnswers() {
   appItems.questions[currentQuestion].answers.forEach(function(choice) {
     Sam++;
     Answers = `<label id="B${Sam}" for="A${Sam}" class="choice">
-                <input id="A${Sam}" aria-labelledby="B${Sam}" type="radio" name="userAnswer" class="answers js-answers" value="${choice}"> ${choice}</label>
+                <input id="A${Sam}" aria-labelledby="Bob B${Sam}" type="radio" name="userAnswer" class="answers js-answers" value="${choice}"> ${choice}</label>
                 <br/><br/>`;
     radioAnswers += Answers;
   });
@@ -185,7 +185,7 @@ function generateQuestionElement(item) {
         <form id="answer-form">
           <fieldset name="answers">
             
-            <legend class="question-asked js-question-asked">${item.question}</legend>
+            <legend id="Bob" class="question-asked js-question-asked">${item.question}</legend>
       
 
             <div class="answers-area">
