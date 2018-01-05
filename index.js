@@ -180,20 +180,20 @@ function generateQuestionElement(item) {
       let answers = getAnswers();
   return `
       <div class="questionPage js-question-page">
-        <div class="question-area">
-        <p class="question-asked js-question-asked">${item.question}</p>
-        </div>
-
-        <div class="answers-area">
-            <form id="answer-form">
-            <fieldset name="answers">
+        <form id="answer-form">
+          <fieldset name="answers">
             
-            <legend>answers</legend>
-        ${answers}
+            <legend class="question-asked js-question-asked">${item.question}</legend>
+      
+
+            <div class="answers-area">
+            
+                ${answers}
                 <button type="submit" class="submit-btn js-submit-btn">SUBMIT</button>
-            </form>
-        </div>
-        
+
+            </div>
+          </fieldset>
+        </form>
         <div class="nav-status">
           <div class="nav-bits status">
           <span class="count">Query ${currentQuestion+1}/10</span>
